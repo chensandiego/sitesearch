@@ -11,7 +11,7 @@ html
   .row
     .large-12.columns
       .panel
-        form
+        form(method="post",action="/")
           .row
             .text-center
               input(type='radio', name='searchType', value='Website', checked='')
@@ -24,3 +24,10 @@ html
               input.button.tiny(type='submit', value='GO')
 
   block content
+
+  br
+  hr
+  br
+  footer
+    a(href='/websites/add') Add Website |
+    a(href='/articles/add') Add Article
