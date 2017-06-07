@@ -2,6 +2,25 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='/stylesheets/foundation.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+  .row
+    .large-12.columns
+      h1.text-center SiteSearch
+  .row
+    .large-12.columns
+      .panel
+        form
+          .row
+            .text-center
+              input(type='radio', name='searchType', value='Website', checked='')
+              | Website
+              input(type='radio', name='searchType', value='news')
+              | News
+            .large-10.columns
+              input(type='text', placeholder='search...', name='searchText')
+            .large-2.columns
+              input.button.tiny(type='submit', value='GO')
+
+  block content
